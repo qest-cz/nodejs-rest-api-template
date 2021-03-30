@@ -1,0 +1,28 @@
+components:                
+  schemas:
+    ExampleOK:
+      type: object
+      properties:
+        foo:
+          type: string
+        bar:
+          type: string
+paths:
+  /example:
+    get:
+      description: get example
+      parameters:
+        - in: query
+          name: id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExampleOK'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntityError'
+

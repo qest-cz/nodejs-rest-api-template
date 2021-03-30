@@ -1,0 +1,7 @@
+paths:
+  /swagger:
+    get:
+      description: get swagger documentation of project in raw (string) format
+      responses:
+        '200':
+          description: documentation of project in raw (string) format

@@ -1,0 +1,20 @@
+components:                
+  schemas:
+    StatusOK:
+      type: object
+      properties:
+        service:
+          type: string
+          example: nodejs-api-template/0.0.1
+paths:
+  /status:
+    get:
+      description: get status of app
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusOK'
+

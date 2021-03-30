@@ -1,0 +1,153 @@
+components:
+  schemas:
+    HttpError:
+      type: object
+      properties:
+        type:
+          type: string
+          example: error_type
+        message:
+          type: string
+          example: Error description.
+      required:
+        - type
+        - message
+  responses:
+    BadRequestError:
+      description: 'Request not processed - bad_request'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    UnauthorizedError:
+      description: 'Authorization process fail - unauthorized'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    ForbiddenError:
+      description: 'Permission denied - forbidden'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    NotFoundError:
+      description: 'Resource not found - not_found'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    MethodNotAllowedError:
+      description: 'Method Not Allowed - method_not_allowed'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    NotAcceptableError:
+      description: "Request isn't acceptable - not_acceptable"
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    RequestTimeoutError:
+      description: 'Request timeouted - request_timeout'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    ConflictError:
+      description: 'Data conflict - conflict'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    GoneError:
+      description: "Resource isn't available - gone"
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    LengthRequiredError:
+      description: 'Request length header is required - length_required'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    PreconditionFailedError:
+      description: 'Request precondition failed - precondition_failed'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    RequestEntityTooLargeError:
+      description: 'Request entity is too large - request_entity_too_large'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    UnsupportedMediaTypeError:
+      description: 'Media type is not supported - unsupported_media_type'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    UnprocessableEntityError:
+      description: "Validation isn't pass - unprocessable_entity"
+      content:
+        application/json:
+          $ref: '#/components/schemas/HttpError'
+
+    LockedError:
+      description: 'Resource is locked - locked'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    FailedDependencyError:
+      description: 'Request depependency failed - failed_dependency'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    PreconditionRequiredError:
+      description: 'Request need precondition - precondition_required'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    InternalServerError:
+      description: 'Internal server error - internal_server_error'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    NotImplementedError:
+      description: 'Feature was not implemented - not_implemented'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'
+
+    ServiceUnavailableError:
+      description: 'Service is temporarily unavailable - service_unavailable'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HttpError'

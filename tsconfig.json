@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "ES2020"
+    ],
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "",
+    "sourceMap": true,
+    "removeComments": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "@types/node",
+      "@types/jest",
+      "jest"
+    ],
+    "noUnusedLocals": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./scripts/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./src/**/*.test.ts",
+  ]
+}
