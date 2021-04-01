@@ -1,5 +1,5 @@
 import { SwaggerVersions } from '@qest/swagger-utils';
-import { Level } from 'cosmas';
+import { Level } from '@qest/logger-utils';
 import * as packagejson from '../../../package.json';
 
 export const RATE_LIMIT_ENABLED_DEFAULT = true;
@@ -13,8 +13,7 @@ const systemConfig = {
     nodeEnv: process.env.NODE_ENV ?? 'production',
     corsAllowOrigins: process.env.CORS_ALLOW_ORIGINS ?? '*',
     logger: {
-        defaultLevel: (process.env.LOGGER_DEFAULT_LEVEL as Level) ?? 'info',
-        pretty: process.env.LOGGER_PRETTY ? process.env.LOGGER_PRETTY === 'true' : false,
+        level: (process.env.LOGGER_DEFAULT_LEVEL ?? 'info') as Level,
     },
     swagger: {
         includePaths: ['src'],

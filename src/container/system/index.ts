@@ -1,8 +1,8 @@
 import { SwaggerGenerator } from '@qest/swagger-utils';
-import cosmas from 'cosmas';
+import { PinoLogger } from '@qest/logger-utils';
 import config from '../../config';
 
-export const logger = cosmas(config.logger);
+export const logger = new PinoLogger(config.logger);
 
 export const swaggerGenerator = new SwaggerGenerator({
     descriptorInfo: {
