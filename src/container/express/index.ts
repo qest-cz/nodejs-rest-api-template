@@ -1,5 +1,6 @@
 import { corsSetup, server } from '@qest/express-utils';
 import { Router } from 'express';
+import * as bodyParser from 'body-parser';
 import { swaggerUiMiddleware } from '@qest/swagger-utils';
 import config from '../../config';
 import { logger } from '../system';
@@ -25,7 +26,7 @@ export const createExpress = ({ originHeader }: CreateExpress) =>
         logger,
         router,
         middleware: {
-            preRequest: [corsSetup(originHeader)],
+            preRequest: [bodyParser.json(), corsSetup(originHeader)],
         },
     });
 
