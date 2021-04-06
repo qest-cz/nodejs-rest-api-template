@@ -29,7 +29,7 @@
   "dependencies": {
     "@qest/error-utils": "^1.0.1",
     "@qest/express-utils": "^2.0.0",
-    "@qest/logger-utils": "^0.0.6",
+    "@qest/logger-utils": "^0.1.0",
     "@qest/swagger-utils": "^1.0.7",
     "dotenv": "^8.2.0",
     "fp-ts": "^2.9.5",
